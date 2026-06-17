@@ -110,11 +110,37 @@ a{
 
 imgae{height: auto;}
 
+input,
+button{
+  border: none;
+  background: none;
+  font: inherit;
+}
+input{ width: 100%;}
+button{cursor: pointer;}
+address{font-style: normal;}
+ion-icon{pointer-events: none;}
+
+html{
+  font-family: var(--fontFamily-opensans);
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body{
+  background-color: var(--bg-white);
+  color: car(--text-eerie-black-2);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+::placeholder{color: inherit; }
+
 
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
-
+.container{padding-inline: 16px;}
 
 
 
@@ -122,6 +148,36 @@ imgae{height: auto;}
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
+
+.navbar,
+.overlay,
+.header-action{ display: none;}
+.header{
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  background-color: var(--bg-white);
+  padding-block: 12px;
+  z-index: 4
+}
+.header.active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: slideIn 500ms ease-in-out forwards;
+}
+@keyframes slideIn{
+  0%{transform: translateY(-100%);}
+  100%{transform: translateY(0);}
+}
+
+.header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 
 
