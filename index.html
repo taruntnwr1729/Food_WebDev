@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Food Website - delicious meals and easy ordering" />
+    <title>Food Website</title>
+
+    <!-- Fallback favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Example minimal styles -->
+    <style>
+        :root{--bg:#fff;--accent:#e76f51;--text:#222;--muted:#666}
+        *{box-sizing:border-box}
+        body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;margin:0;color:var(--text);background:var(--bg);line-height:1.5}
+        .container{max-width:1100px;margin:0 auto;padding:1rem}
+        header{background:linear-gradient(90deg,#fff 0%,#fff 60%,#f9f9f9);border-bottom:1px solid #eee}
+        .nav{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+        .brand{font-weight:700;color:var(--accent)}
+        nav a{margin-left:1rem;text-decoration:none;color:var(--muted);font-weight:600}
+        .hero{display:grid;grid-template-columns:1fr;gap:1rem;padding:2.5rem 0}
+        .hero .lead{font-size:1.5rem}
+        .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0}
+        .card{border:1px solid #eee;border-radius:8px;padding:1rem;background:#fff}
+        footer{border-top:1px solid #eee;padding:1rem 0;color:var(--muted);font-size:0.9rem;text-align:center;margin-top:2rem}
+        @media(min-width:720px){.hero{grid-template-columns:1fr 360px;align-items:center}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">Food Website</div>
+            <nav>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div>
+                <h1 id="hero-heading">Delicious meals made simple</h1>
+                <p class="lead">Fresh ingredients, seasonal flavors, delivered or ready for pickup. Explore our menu and order online.</p>
+                <p><a href="#menu" style="color:var(--accent);font-weight:700;text-decoration:none">Explore menu →</a></p>
+            </div>
+            <div>
+                <div class="card">
+                    <h3>Order now</h3>
+                    <p>Fast delivery, easy pickup options, and safe contactless service.</p>
+                    <p style="margin:0.75rem 0"><a href="#contact" style="color:var(--accent);text-decoration:none">Get in touch</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" aria-labelledby="menu-heading">
+            <h2 id="menu-heading">Popular dishes</h2>
+            <div class="cards">
+                <div class="card">
+                    <strong>Margherita Pizza</strong>
+                    <p style="margin:.5rem 0;color:var(--muted)">Tomato, fresh mozzarella, basil.</p>
+                </div>
+                <div class="card">
+                    <strong>Grilled Chicken Bowl</strong>
+                    <p style="margin:.5rem 0;color:var(--muted)">Rice, seasonal vegetables, herb sauce.</p>
+                </div>
+                <div class="card">
+                    <strong>Seasonal Salad</strong>
+                    <p style="margin:.5rem 0;color:var(--muted)">Greens, roasted veggies, citrus dressing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About us</h2>
+            <p>We believe in simple, honest food made with care. Local suppliers and sustainable practices shape our menu.</p>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <p style="margin:0 0 .5rem 0">Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; <span id="year"></span> Food Website. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // small script to keep footer year current
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
