@@ -1,96 +1,11 @@
 /*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2023 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-:root{
-
-  /* Background Color */
-    
-    --bg-sinopia: hsl(17, 100%, 44%);
-    --bg-sinopia-alpha-90: hsla(17, 100%, 44%, 0.9);
-    --bg-sinopia-alpha-7: hsla(17, 100%, 44%, 0.07);
-    --bg-rich-black-fogra-29: hsl(207, 24%, 7%);
-    --bg-rich-black-rogra-29-alpha-50: hsla(207, 24%, 7%, 0.5);
-    --bg-white: hsl(0, 0%, 100%);
-    --bg-isabelline: hsl(30, 43%, 97%);
-    --bg-seashell: hsl(15, 80%, 96%);
-    --bg-light-gray: hsl(0, 0%, 80%);
-    --bg-black: hsl(0, 0%, 0%);
-    
-
-
-
-    
-    --text-white: hsl(0, 0%, 100%);
-    --text-black: hsl(0, 0%, 0%);
-    --text-sinopia: hsl(17, 100%, 44%);
-    --text-rich-black-fogra-29: hsl(207, 24%, 7%);
-    --text-granite-gray: hsl(0, 0%, 40%);
-
-    
-  /* Border Color */
-    
-    --border-white: hsl(0, 0%, 100%);
-    --border-white-alpha-50: hsla(0, 0%, 100%, 0.5);
-    --border-cultured: hsl(0, 0%, 93%);
-    --border-platinum: hsl(30, 9%, 87%);
-    
-
-/* Typography */
-    --fontFamily-opensans: 'Open Sans', sans-serif;
-    --fontFamily-forum: 'Forum', cursive;
-
-    --fontSize-1: 4.0rem;
-    --fontSize-2: 3.6rem;
-    --fontSize-3: 3.5rem;
-    --fontSize-4: 2.7rem;
-    --fontSize-5: 2.4rem;
-    --fontSize-6: 1.8rem;
-    --fontSize-7: 1.6rem;
-    --fontSize-8: 1.4rem;
-
-/* Font Weight */
-    --weight-regular: 400;
-    --weight-semiBold: 600;
-
-/*Spacing */
-  --section-spacing: 80px;
-/*Shadow */
-  --shadow: 0px 4px 40px hsla(0, 0%, 0%, 0.1);
-/*Border Radius */
-  --radius-5: 5px;
-  --radius-8: 8px;
-  --radius-12: 12px;
-  --radius-circle: 50%;
-
-/*Transition */
-  --transition-1: 250ms ease;
-  --transition-2: 500ms ease;
-
-
-}
-
-
-
-
-/*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
 
-
-::before
-::after {
+/* FIXED: Added missing commas and asterisk so it applies to everything */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -98,147 +13,44 @@
 li {
   list-style: none;
 }
+/* Note: display: block on spans/icons can sometimes alter flex layout, 
+   but keeping it here since the template expects it */
 a,
 img,
 span,
-button ,
-ion-icon{display: block;}
-a{
+button,
+ion-icon { display: block; }
+
+a {
   color: inherit;
   text-decoration: none;
 }
 
-imgae{height: auto;}
+img { height: auto; } /* FIXED: 'imgae' to 'img' */
 
 input,
-button{
+button {
   border: none;
   background: none;
   font: inherit;
 }
-input{ width: 100%;}
-button{cursor: pointer;}
-address{font-style: normal;}
-ion-icon{pointer-events: none;}
+input { width: 100%; }
+button { cursor: pointer; }
+address { font-style: normal; }
+ion-icon { pointer-events: none; }
 
-html{
+html {
   font-family: var(--fontFamily-opensans);
   scroll-behavior: smooth;
-  font-size: 10px;
+  font-size: 10px; /* 10px means 1rem = 10px */
 }
 
-body{
+body {
   background-color: var(--bg-white);
-  color: car(--text-eerie-black-2);
-  font-size: 1.6rem;
+  /* FIXED: changed car() to var() and used your existing color variable */
+  color: var(--text-rich-black-fogra-29); 
+  font-size: 1.6rem; /* Equals 16px */
   line-height: 1.5;
 }
 
-::placeholder{color: inherit; }
-
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
-.container{padding-inline: 16px;}
-
-
-
-
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
-
-.navbar,
-.overlay,
-.header-action{ display: none;}
-.header{
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
-  background-color: var(--bg-white);
-  padding-block: 12px;
-  z-index: 4
-}
-.header.active{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  animation: slideIn 500ms ease-in-out forwards;
-}
-@keyframes slideIn{
-  0%{transform: translateY(-100%);}
-  100%{transform: translateY(0);}
-}
-
-.header .container{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #POPULAR
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #MENU
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #SCHEDULE
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #RESERVATION
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #BACK TO TOP
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
+::placeholder { color: inherit; }
